@@ -1,0 +1,50 @@
+/* code for a more responsive webpage */
+@media screen and (max-width: 768px) {
+    /* CSS rules for screens up to 768px width */
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* CSS rules for screens up to 480px width */
+  }
+
+
+  
+  
+  
+body {
+    height: 50vh;
+    width: 50vh;
+    background-image: url(Images/different-sport-balls.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+
+    
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 7vh;
+    margin-left: 75vh;
+    white-space: nowrap;
+    
+  }
+
+  .dropdown {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 15vh;
+    margin-left: 5vh;
+  }
+
+  #main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90vh;
+  }
+
+  .answer {
+    margin-top: 10vh;
+  }
+  
