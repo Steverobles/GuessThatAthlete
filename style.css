@@ -22,7 +22,6 @@ body {
     background-repeat: no-repeat;
     font-family: 'Open Sans', sans-serif;
     padding-top: 50px;
-    border: 2px solid red;
      }
 
 header {
@@ -45,5 +44,40 @@ h1 {
   grid-gap: 20px;
   grid-row: 10;
 
+}
 
+.display-message > input {
+  display: grid;
+  grid-template-columns: 5fr 5fr 5fr;
+  background-color: lightgrey;
+  font-size: 25px;
+  
+}
+
+.detail-msg {
+
+  padding: 100px 180px 100px 180px;
+  text-align: center;
+  border-radius: 1vh;
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  justify-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 105px;
+  text-align: center;
+  border-radius: .5vh;
+  padding: 15px 75px 15px 75px;
+  background-color: lightgray;
+}
+
+#main-btn {
+  margin: 0;
+  width: 25%;
+  margin-left: 225px ;
+  border-radius: 1vh;
+  font-size: 25px;
 }
