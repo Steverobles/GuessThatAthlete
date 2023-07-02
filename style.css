@@ -12,39 +12,38 @@
   
   
 body {
-    height: 50vh;
-    width: 50vh;
+    height: 100vh;
+    /* display: flex;
+    align-items: stretch;
+    justify-content:space-between;
+    flex-direction: column; */
     background-image: url(Images/different-sport-balls.jpg);
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
     font-family: 'Open Sans', sans-serif;
+    padding-top: 50px;
+    border: 2px solid red;
+     }
 
-    
-  }
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* width: 100%; */
+}
 
-  h1 {
-    text-align: center;
-    margin-top: 7vh;
-    margin-left: 75vh;
-    white-space: nowrap;
-    
-  }
+.dropdown-content > a {
+  display: block;
+}
 
-  .dropdown {
-    display: flex;
-    justify-content: left;
-    margin-bottom: 15vh;
-    margin-left: 5vh;
-  }
+h1 {
+  text-align: center;
+}
 
-  #main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 90vh;
-  }
+#main-content {
+  display: grid;
+  place-content: center;
+  grid-gap: 20px;
+  grid-row: 10;
 
-  .answer {
-    margin-top: 10vh;
-  }
-  
+
+}
