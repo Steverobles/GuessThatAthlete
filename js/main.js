@@ -36,6 +36,7 @@ const nflQuestionsAndAnswers = [
 
 /*----- state variables -----*/
 let guessAthlete, userInput
+let randomIndex
 
 
 
@@ -43,8 +44,8 @@ let guessAthlete, userInput
 
 
 /*----- cached elements  -----*/
-const mainBtn = document.querySelector('#main-btn')
-const wrongAnswer = document.querySelector('h2')
+
+const message = document.querySelector('h2')
 const guessInput = document.querySelector('.answer')
 
 
@@ -55,7 +56,7 @@ const guessInput = document.querySelector('.answer')
 /*----- event listeners -----*/
 
 
-mainBtn.addEventListener('click', startGame)
+
 
 
 
@@ -66,23 +67,42 @@ mainBtn.addEventListener('click', startGame)
 /*----- functions -----*/
 function startGame() {
   let randomDetails = document.getElementById('detail-msg')
-  let randomIndex = Math.floor(Math.random() * nflQuestionsAndAnswers.length)
+  randomIndex = Math.floor(Math.random() * nflQuestionsAndAnswers.length)
   let displayMessage = nflQuestionsAndAnswers[randomIndex]
-  randomDetails.value = displayMessage.Details
+  randomDetails.innerHTML = displayMessage.Details
+  
+  let beginGame = document.getElementById('mainButton') 
+  beginGame.textContent = 'Play Again'
+  let msgElement = document.getElementById('message')
+  msgElement.innerHTML = ''
+
 } 
 
 // After the start game function is initiated the user will get their chance to input their guess.
 
 function checkGuess () {
-    let userGuess = document.getElementById('answer')
-    let inputElement = userGuess.value
-    let randomIndex = Math.floor(Math.random() * nflQuestionsAndAnswers.length)
-    let correctAnswer = nflQuestionsAndAnswers[randomIndex].Athlete;
+    let userGuess = document.getElementById('answer').value.toLowerCase()
+    // let inputElement = userGuess.value.toLowerCase()
+    //  randomIndex = Math.floor(Math.random() * nflQuestionsAndAnswers.length)
+    let correctAnswer = nflQuestionsAndAnswers[randomIndex].Athlete.toLowerCase();
+
+    document.getElementById('answer').value = ''
 
     if(userGuess === correctAnswer){
-      return winner()
+      congrats()
     } else {
-      return loser()
+     incorrect() 
     }
-    userGuess.value = ''
+    
+}
+
+function congrats () {
+  let message = document.getElementById('message')
+  message.innerHTML = 'Congrats! you guessed right !'
+}
+
+
+function incorrect () {
+  let message = document.getElementById('message')
+  message.innerHTML = 'Incorrect! you guessed wrong !'
 }
