@@ -1,23 +1,17 @@
-/* code for a more responsive webpage */
+
 @media screen and (max-width: 768px) {
-    /* CSS rules for screens up to 768px width */
+
   }
   
   @media screen and (max-width: 480px) {
-    /* CSS rules for screens up to 480px width */
+
   }
 
 
   
-  
-  
 body {
     height: 100vh;
-    /* display: flex;
-    align-items: stretch;
-    justify-content:space-between;
-    flex-direction: column; */
-    background-image: url(Images/different-sport-balls.jpg);
+    background-image: url(Images/4840638.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     font-family: 'Open Sans', sans-serif;
@@ -27,7 +21,7 @@ body {
 header {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    /* width: 100%; */
+
 }
 
 .dropdown {
@@ -37,9 +31,8 @@ header {
 
 .dropdown-content > a {
   display: block;
-  border: 1px solid lightgray;
-  text-align: center;
-  font-size: 25px;
+  text-align: left;
+  font-size: 50px;
   padding: 10px;
   text-decoration: none;
   color: white;
@@ -49,24 +42,34 @@ header {
 
 .dropdown-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   
 }
 
-.dropdown-content :hover {
-  background-color:lightgrey;
-}
 
 h1 {
   text-align: center;
+  color: white;
 }
 
 h2 {
-  color: black;
+  display: grid;
+  grid-row: 2;
+  grid-column: 2;
+  justify-content: center;
+  color: white;
   font-size: 20px;
 }
+#winning-message {
+  padding-bottom: 20px;
+}
+
+#message {
+  padding-top: 25px;
+ 
+}
+
+
 
 #main-content {
   display: grid;

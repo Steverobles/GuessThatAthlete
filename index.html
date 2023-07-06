@@ -15,19 +15,20 @@
     <header>
         <div class="dropdown">
             <div class="dropdown-content">
-               <a href="#">NFL</a>
-               <!-- <a href="#">NBA</a>
-               <a href="#">MLB</a> -->
+               <a href="#">NFL Edition</a>
             </div>
        </div>
         <h1>Guess That Athlete</h1>
         <h2 id="message"></h2>
+        <h2 id="winning-message"></h2>
+        <h2 id="losing-message"></h2>
+        
         
     </header>
     <main id="main-content">
         <div class="display-message">
-            <textarea id="detail-msg" name="Details" cols="30" rows="10" placeholder="Details"></textarea>
-            <input id="answer" type="text" placeholder="Athlete">
+            <textarea id="detail-msg" name="Details" cols="30" rows="10" placeholder="Details" readonly></textarea>
+            <input id="answer" type="text" placeholder="Athlete" maxlength="15">
         </div>
         <button onclick="checkGuess()" id="enter-btn">Enter</button>
         <button onclick="startGame()" id= "mainButton"> Start Game</button>
